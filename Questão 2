@@ -1,4 +1,3 @@
-// Função para encontrar o menor número em uma lista
 function encontrarMenorNumero(lista) {
     let menor = lista[0];
     for (let i = 1; i < lista.length; i++) {
@@ -9,7 +8,6 @@ function encontrarMenorNumero(lista) {
     return menor;
 }
 
-// Função para encontrar o maior número em uma lista
 function encontrarMaiorNumero(lista) {
     let maior = lista[0];
     for (let i = 1; i < lista.length; i++) {
@@ -20,14 +18,11 @@ function encontrarMaiorNumero(lista) {
     return maior;
 }
 
-// Lista de números
 const numeros = [15, 8, 90, 75, 102, 6, 2];
 
-// Encontrar o menor e o maior número
 const menorNumero = encontrarMenorNumero(numeros);
 const maiorNumero = encontrarMaiorNumero(numeros);
 
-// Imprimir os resultados
 console.log("O menor número é:", menorNumero);
 console.log("O maior número é:", maiorNumero);
 
