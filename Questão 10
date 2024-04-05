@@ -1,0 +1,8 @@
+function contarLetrasMaiusculas(texto) {
+    let letras = texto.split('').filter(letra => letra.toUpperCase() === letra && letra.toLowerCase() !== letra);
+    return letras.length;
+}
+
+let frase = "LoReM IpSuM Is sImPlY DuMmY TeXt oF ThE PrInTiNg aNd tYpEsEtTiNg iNdUsTrY";
+let numeroDeMaiusculas = contarLetrasMaiusculas(frase);
+console.log("Número de letras maiúsculas na frase:", numeroDeMaiusculas);
