@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Calculadora de Idade</title>
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+    <label for="dataNascimento">Digite sua data de nascimento (formato yyyy-MM-dd):</label>
+    <input type="text" id="dataNascimento">
+    <button onclick="calcularIdade()">Calcular Idade</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularIdade() {
+            let dataNascimento = document.getElementById('dataNascimento').value;
+            
+            // Verifica se a data de nascimento foi digitada
+            if (dataNascimento) {
+                // Divide a string da data de nascimento em ano, mês e dia
+                let partesData = dataNascimento.split("-");
+                let anoNascimento = parseInt(partesData[0]);
+                let mesNascimento = parseInt(partesData[1]) - 1; // Mês começa em 0 no JavaScript
+                let diaNascimento = parseInt(partesData[2]);
+
+                // Obtém a data atual
+                let dataAtual = new Date();
+                let anoAtual = dataAtual.getFullYear();
+                let mesAtual = dataAtual.getMonth();
+                let diaAtual = dataAtual.getDate();
+
+                // Calcula a idade
+                let idade = anoAtual - anoNascimento;
+
+                // Verifica se já fez aniversário neste ano
+                if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+                    idade--;
+                }
+
+                document.getElementById('resultado').innerText = "Sua idade é " + idade + " anos.";
+            } else {
+                alert("Data de nascimento não fornecida.");
+            }
+        }
+    </script>
+</body>
+</html>
