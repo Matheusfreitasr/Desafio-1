@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Idade</title>
 </head>
 <body>
@@ -19,7 +21,7 @@
                 // Divide a string da data de nascimento em ano, mês e dia
                 let partesData = dataNascimento.split("-");
                 let anoNascimento = parseInt(partesData[0]);
-                let mesNascimento = parseInt(partesData[1]) - 1; // Mês começa em 0 no JavaScript
+                let mesNascimento = parseInt(partesData[1]) - 1;
                 let diaNascimento = parseInt(partesData[2]);
 
                 // Obtém a data atual
