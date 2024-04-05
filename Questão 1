@@ -1,7 +1,5 @@
-// Array contendo as notas da Aline
 const notasAline = [8, 9, 7];
 
-// Função para calcular a média das notas
 function calcularMedia(notas) {
     let soma = 0;
     for (let nota of notas) {
@@ -10,9 +8,6 @@ function calcularMedia(notas) {
     return soma / notas.length;
 }
 
-// Calcula a média das notas da Aline
 const mediaAline = calcularMedia(notasAline);
 
-// Imprime o resultado
 console.log("A média das notas da Aline é:", mediaAline);
-
