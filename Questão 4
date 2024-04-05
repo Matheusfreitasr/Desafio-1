@@ -1,4 +1,3 @@
-// Função para verificar se um número é primo
 function exibirNumerosPrimos(num) {
     if (num <= 1) {
         return false;
@@ -11,18 +10,14 @@ function exibirNumerosPrimos(num) {
     return true;
 }
 
-// Lista de números fornecidos pelo fazendeiro
 const numeros = [23, 16, 11, 8, 19, 14, 5, 21];
 
-// Array para armazenar os números primos
 const primos = [];
 
-// Verificar cada número da lista e adicionar os primos ao array 'primos'
 for (let num of numeros) {
     if (exibirNumerosPrimos(num)) {
         primos.push(num);
     }
 }
 
-// Imprimir os números primos encontrados
 console.log("Números primos encontrados:", primos);
