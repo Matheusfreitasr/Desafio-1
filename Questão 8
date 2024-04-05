@@ -1,0 +1,11 @@
+let multaPorDia = 0.50;
+let diasAtraso = 7;
+let multaTotal = 0;
+let contador = 1;
+
+while (contador <= diasAtraso) {
+    multaTotal += multaPorDia;
+    contador++;
+}
+
+console.log("Multa total: R$", multaTotal.toFixed(2));
